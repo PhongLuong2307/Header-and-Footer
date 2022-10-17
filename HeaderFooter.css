@@ -195,12 +195,6 @@ footer {
         grid-row-gap: 20px;
     }
 
-    /* .header__account--list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-
     header {
         position: relative;
     }
