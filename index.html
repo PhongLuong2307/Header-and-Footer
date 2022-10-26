@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
@@ -55,7 +58,9 @@
                     <i class="fa-solid fa-bell"></i>
                 </li>
                 <li title="Account" class="header__account--item">
-                    <i class="fa-solid fa-user"></i>
+                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -64,7 +69,81 @@
 
     <!-- End Header -->
 
-    <br>
+    <!-- Sign In/ Sign Up Modal -->
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sign In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body signIn-modal-body">
+                    <form class="signIn-form" action="">
+                        <div class="username-container">
+                            <label class="signIn-label" for="username">Username:</label>
+                            <input class="signIn-input" id="username" type="text">
+                        </div>
+                        <div class="password-container">
+                            <label class="signIn-label" for="password">Password:</label>
+                            <input class="signIn-input" id="password" type="password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="signIn-btn-container">
+                        <a class="signIn-btn" href="">Sign In</a>
+                    </div>
+                    <div class="signUp-btn-container">
+                        Don't have an account?
+                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">
+                            Sign Up Here
+                        </button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="register">
+                        <div class="signUp-username-container">
+                            <label class="signUp-label" for="signUp-username">Username:</label>
+                            <input class="signUp-input" id="signUp-username" type="username">
+                        </div>
+                        <div class="signUp-password-container">
+                            <label class="signUp-label" for="signUp-password">Password:</label>
+                            <input class="signUp-input" id="signUp-password" type="password">
+                        </div>
+                        <div class="signUp-email-container">
+                            <label class="signUp-label" for="signUp-email">Display Name:</label>
+                            <input class="signUp-input" id="signUp-email" type="text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="signUp-btn" data-bs-toggle="modal" href="#exampleModalToggle">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <br>
     <br>
 
@@ -142,6 +221,10 @@
         </div>
     </div>
 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
     <script src="/HeaderFooter.js"></script>
 </body>
 
